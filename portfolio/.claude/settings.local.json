@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(curl:*)",
+      "Bash(lsof:*)",
+      "Bash(claude mcp list:*)",
+      "Bash(claude mcp add:*)",
+      "Bash(claude mcp get:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}
