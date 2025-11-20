@@ -116,6 +116,40 @@ This is a **flagship product design portfolio** for Brandon, a Principal Product
 - Access to Figma file with proper permissions
 - Dev Mode access (paid Figma plan)
 
+### Figma MCP Configuration
+
+**CRITICAL: Never commit Figma tokens to git**
+
+1. Generate a Figma Personal Access Token:
+   - Figma → Settings → Account → Personal Access Tokens
+   - Create token with read access to your files
+
+2. Configure MCP server (in your local MCP config file, NOT in project):
+```json
+   {
+     "mcpServers": {
+       "figma": {
+         "command": "npx",
+         "args": ["-y", "@figmaai/figma-mcp-server"],
+         "env": {
+           "FIGMA_ACCESS_TOKEN": "figd_...",
+           "FIGMA_FILE_KEY": "..."
+         }
+       }
+     }
+   }
+```
+
+3. Ensure `.gitignore` includes:
+```
+   .env.local
+   .env*.local
+   mcp.json
+   figma-token.txt
+```
+
+**Note:** Figma MCP is used during development only. Production builds don't require Figma access.
+
 ### Token Extraction Workflow
 
 **Auto-extract design tokens on every sync:**
