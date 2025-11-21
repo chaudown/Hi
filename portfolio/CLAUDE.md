@@ -1608,13 +1608,5 @@ npm run sync-figma             # Pull latest design tokens
 
 ---
 
-## Version History
-
-- **v1.0** - Initial project setup and documentation
-- Updates will be tracked in git commits
-
----
 
 **End of CLAUDE.md**
-
-This document is the source of truth for building Brandon's portfolio. Follow these guidelines closely, ask for clarification when needed, and prioritize quality and alignment with Figma designs above all else.
